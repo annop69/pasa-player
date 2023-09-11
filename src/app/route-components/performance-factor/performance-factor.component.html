@@ -1,0 +1,78 @@
+<div class="center">
+    <app-spinner></app-spinner>
+    <table class="table table-stripe table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th class="tfactor">Performance Factors</th>
+                <th class="trating">Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="label-text">Ability to Work Effectively and Efficiently</td>
+                <td>
+                    <select class="input-text" (change)="getValue1($event)">
+                        <option value="$">{{selected1 == "null" ? "": selected1}}</option>
+                        <option *ngFor="let option of rating1">{{option}}</option>
+                    </select> 
+                 </td>
+            </tr>
+            <tr>
+                <td class="label-text">Communicates Effectively </td>
+                <td>
+                    <select class="input-text" (change)="getValue2($event)">
+                        <option value="$">{{selected2 == "null" ? "": selected2}}</option>
+                        <option *ngFor="let option of rating2">{{option}}</option>
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td class="label-text">Interpersonal Relationship</td>
+                <td>
+                    <select class="input-text" (change)="getValue3($event)">
+                        <option value="$">{{selected3 == "null" ? "": selected3}}</option>
+                        <option *ngFor="let option of rating3">{{option}}</option>
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td class="label-text">Builds Technical Capabilities</td>
+                <td>
+                    <select class="input-text" (change)="getValue4($event)">
+                        <option value="$">{{selected4 == "null" ? "": selected4}}</option>
+                        <option *ngFor="let option of rating4">{{option}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-text">Ability to Handle Critical Situation</td>
+                <td>
+                    <select class="input-text" (change)="getValue5($event)">
+                        <option value="$">{{selected5 == "null" ? "": selected5}}</option>
+                        <option *ngFor="let option of rating5">{{option}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-text">Leadership</td>
+                <td>
+                    <select class="input-text" (change)="getValue6($event)">
+                        <option value="$">{{selected6 == "null" ? "": selected6}}</option>
+                        <option *ngFor="let option of rating6">{{option}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-text">Attendance</td>
+                <td>
+                    <select class="input-text" (change)="getValue7($event)">
+                        <option value="$">{{selected7 == "null" ? "": selected7}}</option>
+                        <option *ngFor="let option of rating7">{{option}}</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="save()" [ngClass]="canSave() ? 'enableButton' : 'disableButton'" [disabled] = "!canSave()">Save</button>
+    <p>(Rating could be: No Basis, Meet Expectations, Needs Improvement, and Outstanding)</p>
+</div>

@@ -1,0 +1,23 @@
+<p>(Employee’s actual performance which have contributed to creating or increasing good value of work, towards co employees and the company in general.)</p>
+<div class="center">
+    <div class="table-container">
+        <div class="value-creator-head">
+            <div class="val-label">
+                <h2>Value Creator</h2>
+            </div>
+            <div class="add-stats">
+                    <button (click) = "openAddDialog()"><img src="assets/images/icons/plus-square-fill.svg" alt="Add New User"> New</button>
+            </div>
+        </div>
+        
+        <table datatable [dtOptions] = "dtOptions" class="table table-stripe table-bordered table-hover table-sm">
+            <thead>
+                <tr>
+                    <th class="tname">Code</th>
+                    <th class="tdescr">Description</th>
+                    <th class="taction">Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>

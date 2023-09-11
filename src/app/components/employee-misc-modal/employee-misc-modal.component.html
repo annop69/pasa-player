@@ -1,0 +1,22 @@
+<div class="empMisc-modal">
+    <p *ngIf="mode != 2" class="title">{{title}}</p>
+    <p *ngIf="mode == 2">Are you sure you want to delete {{data.data.ticket_id}}</p>
+    <mat-dialog-content>
+        <div class="text-center">
+            <label *ngIf="mode != 2" class="">Code</label>
+        </div>
+        <input *ngIf="mode != 2" class="inp-text" type="text" placeholder="Input text here" [(ngModel)] = "code">
+        <div class="text-center">
+            <label *ngIf="mode != 2">Description</label>
+        </div>
+        <input *ngIf="mode != 2" class="inp-text" type="text" placeholder="Input text here" [(ngModel)] = "descr">
+        <mat-dialog-actions>
+            <div class="footer">
+                <button *ngIf="mode == 0" mat-raised-button color="primary" [disabled]="!isEnabled()" (click)="onAdd()" [mtBasicSpinner]="this.loaderService.getLoading()">Add</button>
+                <button *ngIf="mode == 1" mat-raised-button color="primary" (click)="onUpdate()" [mtBasicSpinner]="this.loaderService.getLoading()">Edit</button>
+                <button *ngIf="mode == 2" mat-raised-button color="warn" (click)="onDelete()" [mtBasicSpinner]="this.loaderService.getLoading()">Delete</button>
+                <button mat-raised-button color="accent" mat-dialog-close="">Close</button>
+            </div>
+        </mat-dialog-actions>
+    </mat-dialog-content>
+</div>

@@ -1,0 +1,48 @@
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: white;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+
+    table{
+        border: 1px solid black;
+
+        .tfactor, .trating, .label-text{
+            text-align: center;
+        }
+
+        .label-text{
+            width: 70%;
+        }
+
+        .input-text{
+            border: none;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    button{
+        border-radius: 5px;
+        color: white;
+        margin-left: 10px;
+        padding: 10px 20px;
+
+        &.enableButton{
+            background-color: green;
+        }
+        
+        &.disableButton{
+            background-color: gray;
+            cursor: default;
+        }
+    }
+
+    p{
+        font-style: italic;
+        text-align: center;
+    }
+}

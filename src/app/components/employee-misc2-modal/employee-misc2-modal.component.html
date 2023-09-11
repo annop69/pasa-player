@@ -1,0 +1,12 @@
+<div class="employee-modal">
+    <p class="title">{{title}}</p>
+    <mat-dialog-content>
+        <input class="inp-text" type="text" placeholder="Input text here" [(ngModel)] = "text">
+        <mat-dialog-actions>
+            <div class="footer">
+                <button mat-raised-button color="primary" (click)="onAdd()" [mtBasicSpinner]="this.loaderService.getLoading()">Add</button>
+                <button mat-raised-button color="accent" mat-dialog-close="">Close</button>
+            </div>
+        </mat-dialog-actions>
+    </mat-dialog-content>
+</div>

@@ -1,0 +1,16 @@
+<div class="tab-container d-flex flex-column">
+    <div class="employee-details-container d-flex justify-content-between">
+        <p>{{employeeInfo.firstName}} {{employeeInfo.lastName}}</p>
+        <button class="btn btn-primary" (click)="logout()">Log out</button>
+    </div>
+    <mat-tab-group [selectedIndex]="currentLinkIndex" (selectedTabChange)="onClickLink($event)">
+        <mat-tab label="Value Creator"></mat-tab>
+        <mat-tab label="People Developer"></mat-tab>
+        <mat-tab label="Business Operator"></mat-tab>
+        <mat-tab label="Other Performance Factor"></mat-tab>
+        <mat-tab label="Strength/Accomplishment"></mat-tab>
+        <mat-tab label="Comments/Feedback"></mat-tab>
+    </mat-tab-group>
+
+    <router-outlet></router-outlet>
+</div>

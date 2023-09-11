@@ -1,0 +1,19 @@
+.employee-modal{
+    .title{
+        font-size: 28px;
+        padding: 10px 0 0 10px;
+        text-align: center;
+    }
+
+    mat-dialog-content{
+        max-height: 85vh;
+
+        .inp-text{
+            width: 100%;
+        }
+    }
+
+    .footer{
+        margin: 10px auto 0;
+    }
+}

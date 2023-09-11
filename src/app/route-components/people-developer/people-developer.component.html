@@ -1,0 +1,23 @@
+<p>(Where employee has shown good leadership, encourages others, and has been given the chance to promote others.)</p>
+<div class="center">
+    <div class="table-container">
+        <div class="people-developer-head">
+            <div class="dev-label">
+                <h2>People Developer</h2>
+            </div>
+            <div class="add-stats">
+                    <button (click) = "openAddDialog()"><img src="assets/images/icons/plus-square-fill.svg" alt="Add New User"> New</button>
+            </div>
+        </div>
+        
+        <table datatable [dtOptions] = "dtOptions" class="table table-stripe table-bordered table-hover table-sm">
+            <thead>
+                <tr>
+                    <th class="tname">Code</th>
+                    <th class="tdescr">Description</th>
+                    <th class="taction">Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>

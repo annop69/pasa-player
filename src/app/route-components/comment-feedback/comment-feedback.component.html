@@ -1,0 +1,14 @@
+<div class="center" [ngClass]="{noScroll: this.loaderService.getLoading()}">
+    <div class="container">
+        <header class="d-flex justify-content-between">
+            <h1>My Comments/Feedback</h1>
+            <button class="btn-add">Add</button>
+        </header>
+        <app-spinner></app-spinner>
+        <div class="content" *ngFor="let data of datas">
+            <h3>{{data.descr}}<fa-icon class="close-icon"
+                [icon]="closeIcon"
+                (click) = "onDelete(data)"></fa-icon></h3>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+@import "../../../../node_modules/datatables.net-dt/css/jquery.dataTables.css";
+
+p{
+    font-style: italic;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.center{
+    position: fixed;
+    top: 32vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    background-color: white;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+
+    .table-container{
+        margin: 0 10px;
+
+        .people-developer-head{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0 10px 0;
+
+            .dev-label{
+                display: flex;
+                vertical-align: middle;
+                justify-content: flex-start;
+            }
+    
+            .add-stats{
+                display: flex;
+                justify-content: flex-end;
+
+                button{
+                    color: white;
+                    background-color: #007bff;
+                    border-radius: 7px;
+                    height: 35px;
+                    width: auto;
+
+                    img{
+                        height: 20px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }              
+}
